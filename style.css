@@ -1,26 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
   /* display: grid;
   place-content: center; */
+  /* display: flex; */
   text-align: center;
+  font-family: Bai Jamjuree;
+  background-image: url(./images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  color: hsl(201, 11%, 66%);
 }
 
 section {
   margin-bottom: 5rem;
 }
 
+button {
+  margin-top: 3rem;
+  height: 50px;
+  width: 200px;
+  border-radius: 50px;
+  border: 0;
+  margin-right: 1rem;
+}
+
 footer {
   display: flex;
+  font-weight: 500;
+}
+
+footer > p:hover {
+  color: hsl(171, 66%, 44%);
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  background-color: hsl(171, 66%, 44%);
+}
+
+footer,
+h1,
+h3 {
+  color: hsl(210, 10%, 33%);
+}
+
+.heading {
+  margin-bottom: 1.5rem;
 }
 
 .container {
-  width: 80vw;
+  max-width: 100vw;
+  padding-top: 5rem;
 }
+
+/* .section-heading {
+  width: 50vw;
+} */
 
 .section-2 {
   display: grid;
@@ -28,9 +73,13 @@ footer {
   grid-template-rows: 1fr 4fr;
 }
 
-.section2-heading {
+.s2-heading {
   grid-column: 1 / 3;
   place-self: center;
+}
+
+.computer {
+  transform: translateX(-50px);
 }
 
 .section-4 {
@@ -39,13 +88,18 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.section4-heading {
+.s4-heading {
   grid-column: 2;
 }
 
 .text-features {
   display: flex;
   grid-column: 1 / 4;
+}
+
+.text-feature {
+  padding: 0 4rem 0 4rem;
+  font-size: 0.9rem;
 }
 
 /* .text-feature {
