@@ -7,7 +7,7 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 - [Solution](https://your-solution-url.com)
 - [Live Site](https://your-live-site-url.com)
