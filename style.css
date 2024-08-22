@@ -1,6 +1,8 @@
 /* TODO:
-    - check title's font weight, it dont look right
-    - change any px width to %
+    + check all title's font weight, it dont look right
+    + change any px width to %
+    - fluid typography
+    + fix line heights
 */
 
 :root {
@@ -11,6 +13,8 @@
   --light-grayish-blue: hsl(201, 11%, 96%);
   --grayish-blue:       hsl(201, 11%, 66%);
   --dark-grayish-blue:  hsl(210, 10%, 33%);
+  --ios-box-shadow:     hsl(171, 66%, 44%, 0.4);
+  --mac-box-shadow:     hsl(233, 100%, 69%, 0.4);      
 }
 
 * {
@@ -41,9 +45,11 @@ img {
 button {
   font-family: bai jamjuree;
   font-size: 1.1rem;
-  font-weight: 600;
-  width: 200px;
-  height: 45px;
+  font-weight: 510;
+  /* width: 200px;
+  height: 45px; */
+  width: 17.5%;
+  height: 8vh;
   border-radius: 50px;
   border: none;
   color: white;
@@ -68,8 +74,7 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 7rem;
-  /* justify-content: center; */
-  padding: 0 8rem 0 8rem;
+  padding: 2rem 8rem 2rem 8rem;
 }
 
 /* .corp-logo {
@@ -80,6 +85,7 @@ button:hover {
 
 .computer {
   transform: translateX(-3.7%);
+  max-inline-size: 150%;
 }
 
 .feature-p {
@@ -91,14 +97,40 @@ button:hover {
   /* gap: 7rem; */
 }
 
+.s2-feature-p {
+  width: 68%;
+}
+
 .service-features {
-  padding: 5rem 10rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3.5rem 0 0 5rem;
   text-align: left;
+  row-gap: 3rem;
 }
 
 .text-features {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 6rem 0 6rem;
+  column-gap: 3rem;
+}
+
+.text-feature {
+  display: grid;
+  grid-template-rows: 1fr .1fr 1fr;
+}
+
+.tf-icon {
+  display: inline-block;
+  place-self: center;
+  margin-bottom: 2rem;
+  /* height: 100%; */
+}
+
+.tf-p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
 }
 
 /* HEADINGS */
@@ -108,7 +140,12 @@ button:hover {
 }
 
 .title {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.title,
+.feature-title {
+  font-weight: 510;
 }
 
 .title,
@@ -117,7 +154,12 @@ footer {
   color: var(--dark-grayish-blue);
 }
 
-.feature-title {
+.sf-title {
+  font-size: 1.69rem;
+  margin-bottom: 0.3rem;
+}
+
+.tf-title {
   font-size: 1.5rem;
 }
 
@@ -127,7 +169,7 @@ footer {
 }
 
 .title:not(.s1-title) {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .s1-heading-p {
@@ -151,15 +193,16 @@ footer {
 
 .dl-buttons {
   padding-top: 3.5rem;
+  /* width: 100%; */
 }
 
 .dl-buttons-lower {
-  padding-bottom: 8rem;
+  padding-bottom: 10rem;
 }
 
 .button-ios {
   background-color: var(--strong-cyan);
-  box-shadow: 4px 4px 10px hsl(171, 66%, 44%, 0.4);
+  box-shadow: 4px 4px 10px var(--ios-box-shadow);
 }
 
 .button-ios:hover {
@@ -168,7 +211,7 @@ footer {
 
 .button-mac {
   background-color: var(--light-blue);
-  box-shadow: 4px 4px 10px hsl(233, 100%, 69%, 0.4);
+  box-shadow: 4px 4px 10px var(--mac-box-shadow);
 }
 
 .button-mac:hover {
@@ -182,7 +225,7 @@ footer {
   grid-template-columns: 0.95fr 3fr 1fr;
   background-color: var(--light-grayish-blue);
   font-size: 1.2rem;
-  font-weight: 500;
+  /* font-weight: 500; */
   padding: 3rem 6rem 1rem 6rem;
 }
 
@@ -245,15 +288,25 @@ footer {
     font-size: 1.2rem;
   }
   .title:not(.s1-title) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .heading-p:not(.s1-heading-p) {
     font-size: 1.24rem;
   }
+  .tf-p {
+    font-size: 1.2rem;
+  }
+  /* -------------- */
   .computer {
     transform: translate(0);
   }
-  /* -------------- */
+  .s2-feature-p {
+    width: 100%;
+  }
+  .service-features {
+    padding: 5rem 0 0 0;
+    text-align: center;
+  }
   .corp-logos {
     /* gap: 0; */
     padding: 0;
@@ -289,7 +342,17 @@ footer {
   .s2-features {
     flex-direction: column;
   }
-  .dl-buttons {
-    row-gap: 1.5rem;
+  .text-features {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+    padding: 0;
+  }
+  button {
+    width: 100%;
+    height: 6vh;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    /* font-weight: 510; */
   }
 }
