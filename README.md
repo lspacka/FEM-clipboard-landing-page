@@ -9,10 +9,15 @@ Users should be able to:
 
 ![](./screenshot.png)
 
-- [Solution](https://your-solution-url.com)
-- [Live Site](https://your-live-site-url.com)
+- [Solution](https://www.frontendmentor.io/solutions/clipboard-landing-page---html-css-It8Eqmeq_I)
+- [Live Site](https://lspacka.github.io/FEM-clipboard-landing-page/)
 
 ### Built with
 
 - HTML
 - CSS
+
+### Author
+
+- [Frontend Mentor](https://www.frontendmentor.io/profile/lspacka)
+- [Twatter](https://x.com/lspacka)
